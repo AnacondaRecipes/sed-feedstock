@@ -18,6 +18,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
+    - libtool
   host:
     - gettext >=0.19.2  # [osx]
   run:
