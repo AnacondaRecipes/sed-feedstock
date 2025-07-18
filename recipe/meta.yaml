@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - make
     - libtool
   host:
@@ -30,10 +31,18 @@ test:
     - sed --version
 
 about:
-  home: https://www.gnu.org/software/sed/
+  home: https://www.gnu.org/software/sed
   license: GPL-3
-  summary: 'sed (stream editor) is a non-interactive command-line text editor.'
-
+  license_family: GPL
+  license_file: COPYING
+  summary: sed (stream editor) is a non-interactive command-line text editor.
+  description: |
+    sed is commonly used to filter text, i.e., it takes text input, performs
+    some operation (or set of operations) on it, and outputs the modified text.
+    sed is typically used for extracting part of a file using pattern matching
+    or substituting multiple occurrences of a string within a file.
+  dev_url: https://cgit.git.savannah.gnu.org/cgit/sed.git
+  doc_url: https://www.gnu.org/software/sed/manual/sed.html
 extra:
   recipe-maintainers:
     - mingwandroid
